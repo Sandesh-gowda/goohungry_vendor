@@ -41,4 +41,19 @@
     <color name="ok_green">#e41ad214</color>
     <color name="black_glass">#b3232323</color>
     <color name="sexy">#327347</color>
+    <color name="orangedark">#da650a</color>
+
+    <color name="window_background">#fff8f8f8</color>
+
+    <color name="rating_green">#ff4db614</color>
+    <color name="transparent_black_card_amount">#af000000</color>
+
+
+
+    <color name="primary_text">#ff212121</color>
+    <color name="light_yellow">#fffcf2dd</color>
+    <color name="secondary_text">#ff727272</color>
+    <color name="faasos_credit_text">#ff25b06d</color>
+    <color name="card_separator_color">#ffd7d7d7</color>
+
 </resources>

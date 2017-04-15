@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Ecode</string>
+    <string name="app_name">Goohungrry</string>
+    <string name="ruppee">₹</string>
+    <string name="rs">₹</string>
+    <string name="txt_payable_amt">Payable Amount</string>
+    <string name="Rupee">₹</string>
 </resources>

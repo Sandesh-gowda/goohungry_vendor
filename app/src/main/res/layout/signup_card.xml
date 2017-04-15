@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    style="@style/CardView.Small"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5.0dip"
+    android:layout_marginLeft="5.0dip"
+    android:layout_marginRight="5.0dip"
+    android:layout_marginTop="5.0dip"
+    app:cardElevation="2.0dip">
+
+    <LinearLayout
+        android:id="@+id/ll_ProductInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dip">
+
+            <TextView
+                android:id="@+id/tv_address_text"
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Please, enter the following details "
+                android:textSize="16dip"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_address_text"
+                android:layout_marginTop="15.0dip"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="0.5dip"
+                    android:background="#cfcfcf" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/gh_name"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="50.0dip"
+                android:singleLine="false"
+                android:inputType="text"
+                android:hint="Name"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <EditText
+                android:id="@+id/gh_email"
+                android:layout_below="@+id/gh_name"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:singleLine="false"
+                android:inputType="textEmailAddress"
+                android:hint="Email Address"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <EditText
+                android:id="@+id/gh_password"
+                android:layout_below="@+id/gh_email"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:singleLine="false"
+                android:inputType="textPassword"
+                android:hint="Enter password"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <TextView
+                android:id="@+id/gh_mobile"
+                android:layout_below="@+id/gh_password"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:text="Mobile Number"
+                android:textSize="20dip"
+                android:textColor="@color/orangedark"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:orientation="vertical">
+
+
+                <LinearLayout   android:id="@+id/pdc_llParent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:background="#cfcfcf" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip">
+
+                        <LinearLayout
+                            android:id="@+id/ll_spice_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6.0dip"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+
+                        <RelativeLayout
+                            android:id="@+id/rr_Price_counter"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/tvErrMsg"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="left"
+                                android:paddingBottom="0.0dip"
+                                android:text="Proceed"
+                                android:textSize="18dip"
+                                android:textAllCaps="true"
+                                android:textColor="@color/green"
+                                android:visibility="visible"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
