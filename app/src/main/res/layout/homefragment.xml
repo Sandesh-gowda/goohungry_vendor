@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/search_layout"
+            app:layout_scrollFlags="enterAlways|exitUntilCollapsed|scroll|snap">
+
+            <RelativeLayout
+                android:id="@+id/custom_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/custom_toolbar_title_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_toLeftOf="@+id/restaurant_favourite_listing_layout"
+                    android:clickable="true"
+                    android:foreground="@drawable/ripple_rectangle"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/custom_toolbar_title_image"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/mb"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/location" />
+
+                    <RelativeLayout
+                        android:id="@+id/custom_toolbar_title_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/custom_toolbar_title_image"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/custom_toolbar_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/gap"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Hsr Layout "
+                            android:textColor="@color/black"
+                            android:textSize="18.0sp"
+                             />
+
+                        <TextView
+                            android:id="@+id/custom_toolbar_subtitle_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/custom_toolbar_title"
+                            android:layout_below="@+id/custom_toolbar_title"
+                            android:layout_marginBottom="4.0dip"
+                            android:layout_marginRight="@dimen/gap"
+                            android:layout_marginTop="2.0dip"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="hsr 5th sector"
+                            android:textColor="@color/black"
+                            android:textSize="12.0sp"
+                            android:visibility="visible"
+                             />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/restaurant_favourite_listing_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:gravity="center_horizontal"
+                    android:paddingRight="@dimen/margin_small">
+
+                    <ImageView
+                        android:id="@+id/restaurant_favourite_listing"
+                        android:layout_width="48.0dip"
+                        android:layout_height="fill_parent"
+                        android:padding="@dimen/margin_normal"
+                        android:src="@drawable/favorites_listing"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/card_search_view"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/search_layout"
+                android:layout_below="@+id/custom_toolbar"
+                android:layout_margin="0.0dip"
+                android:background="@color/colorPrimary"
+                android:padding="0.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:background="@color/colorPrimary"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/activity_restaurant_search_text"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/search_rounded_background"
+
+                        android:drawablePadding="11.0dip"
+
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:hint="search dish"
+                        android:maxLines="1"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/restaurant_activity_left_margin"
+                        android:theme="@style/SearchEditTextTheme"
+                        />
+
+                    <View
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content" />
+
+                    <RelativeLayout
+                        android:id="@+id/activity_restaurant_filter_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:foreground="@drawable/ripple_rectangle"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/mb"
+                        android:paddingRight="@dimen/mb">
+
+                        <TextView
+                            android:id="@+id/activity_restaurant_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:maxLines="1"
+
+                             android:textSize="15.0sp"
+                           />
+
+                        <ImageView
+                            android:id="@+id/activity_restaurant_filter_applied"
+                            android:layout_width="6.0dip"
+                            android:layout_height="6.0dip"
+                            android:layout_alignTop="@+id/activity_restaurant_filter"
+                            android:layout_marginTop="-2.0dip"
+                            android:layout_toRightOf="@+id/activity_restaurant_filter"
+                            android:src="@drawable/v2_green_circle_drawable" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/banner_notify_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingTop="@dimen/margin_normal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+                <FrameLayout
+                    android:id="@+id/close_button_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/dismiss_banner_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:paddingBottom="@dimen/margin_normal"
+                        android:src="@drawable/ss"
+                        android:paddingLeft="@dimen/margin_normal"
+                        android:paddingRight="@dimen/mb"
+                        android:paddingTop="@dimen/margin_normal"
+                      />
+
+
+                </FrameLayout>
+            </RelativeLayout>
+
+           
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/restaurant_list_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/banner_notify_layout"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayoutNew"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_new"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                  />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fetch_progress_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/fetch_progress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:maxLines="2"
+                android:text="locating_you"
+                android:textColor="@color/black"
+                android:textSize="14.0sp"
+               />
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/clear_filters_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:visibility="gone">
+
+            <android.support.v7.widget.CardView
+                style="@style/CardViewStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:cardElevation="1.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/clear_filters_layout_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="150.0dip"
+                        android:paddingBottom="@dimen/margin_normal"
+                        android:paddingLeft="24.0dip"
+                        android:paddingRight="24.0dip"
+                        android:paddingTop="@dimen/margin_normal"
+                         />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:gravity="center|top"
+                        android:paddingBottom="12.0dip"
+                        android:paddingLeft="16.0dip"
+                        android:paddingRight="16.0dip">
+
+                        <TextView
+                            android:id="@+id/clear_filters_layout_message_title"
+                            style="@style/ReferralScreenDescriptionText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|top"
+                            android:maxLines="2"
+                            android:paddingLeft="24.0dip"
+                            android:paddingRight="24.0dip"
+                            android:text="Area is closed"
+                            android:textSize="16.0sp"
+                            android:visibility="gone"
+                             />
+
+                        <TextView
+                            style="@style/ReferralScreenDescriptionText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/clear_filters_layout_message_title"
+                            android:gravity="center|top"
+                            android:paddingBottom="@dimen/margin_normal"
+                            android:paddingLeft="24.0dip"
+                            android:paddingRight="24.0dip"
+                            android:paddingTop="@dimen/gap"
+                            android:text="clear_filters_message"
+                            android:textSize="15.0sp"
+                             />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.30000007dip"
+                        android:background="@color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/clear_filters_layout_button"
+                        style="@style/CardViewFooterStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:clickable="true"
+                        android:foreground="@drawable/ripple_rectangle"
+                        android:paddingBottom="12.0dip"
+                        android:paddingTop="12.0dip">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:minHeight="0.0dip"
+
+                            android:textAllCaps="true"
+
+                             />
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

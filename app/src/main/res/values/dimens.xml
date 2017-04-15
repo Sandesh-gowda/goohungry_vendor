@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="search_layout">52.0dip</dimen>
+    <dimen name="mb">12.0dip</dimen>
+    <dimen name="gap">8.0dip</dimen>
+    <dimen name="margin_large">16.0dip</dimen>
+    <dimen name="margin_normal">8.0dip</dimen>
+    <dimen name="margin_small">4.0dip</dimen>
+    <dimen name="restaurant_activity_left_margin">8.0dip</dimen>
+    <dimen name="restaurant_activity_right_margin">8.0dip</dimen>
+    <dimen name="restaurant_activity_search_bottom_margin">8.0dip</dimen>
+    <dimen name="restaurant_activity_search_height">38.0dip</dimen>
+    <dimen name="restaurant_activity_search_right_margin">58.0dip</dimen>
+    <dimen name="restaurant_activity_search_top_margin">58.0dip</dimen>
+
+</resources>
