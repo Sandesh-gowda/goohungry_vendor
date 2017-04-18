@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.zaxme.app.R;
+import com.goohungrry.ecode.R;
 
 
 /**

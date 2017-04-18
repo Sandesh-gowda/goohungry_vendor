@@ -1,0 +1,19 @@
+<!--<ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:indeterminate="false"/>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/transparent" >
+
+    <com.zaxme.app.shared.customview.ZaxLoadingView
+        android:id="@+id/hud"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_20"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_10" />
+
+</LinearLayout>

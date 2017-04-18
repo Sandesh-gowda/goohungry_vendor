@@ -1,13 +1,22 @@
 package com.goohungrry.ecode;
 
+import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.goohungrry.ecode.homeFragment.HomeResturantFragment;
 import com.goohungrry.ecode.homeFragment.SearchResturantFragment;
 import com.goohungrry.ecode.homeFragment.UserProfileFragment;
@@ -146,4 +155,10 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {}
+
+    /**
+     * Created by linuxy on 1/16/17.
+     */
+
+
 }

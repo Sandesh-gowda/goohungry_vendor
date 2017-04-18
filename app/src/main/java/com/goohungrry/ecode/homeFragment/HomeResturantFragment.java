@@ -1,13 +1,10 @@
 package com.goohungrry.ecode.homeFragment;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +17,10 @@ import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import com.goohungrry.ecode.HomeActivity;
+import com.goohungrry.ecode.Myapp;
 import com.goohungrry.ecode.R;
 import com.goohungrry.ecode.adapter.ResturantListAdapter;
-import com.goohungrry.ecode.helper.Myapp;
 import com.goohungrry.ecode.helper.VolleyMultipartRequest;
 import com.goohungrry.ecode.model.resturantList.RestList;
 

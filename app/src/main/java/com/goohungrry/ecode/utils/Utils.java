@@ -25,7 +25,8 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.goohungrry.ecode.MyApplication;
+import com.goohungrry.ecode.HomeActivity;
+import com.goohungrry.ecode.Myapp;
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -177,7 +178,7 @@ public class Utils {
             String mimeType = "";
             Uri uri = Uri.fromFile(new File(mPath));
             if (uri.getScheme().equals(ContentResolver.SCHEME_CONTENT)) {
-                ContentResolver cr = MyApplication.getContext().getContentResolver();
+                ContentResolver cr = Myapp.getContext().getContentResolver();
                 mimeType = cr.getType(uri);
             } else {
                 String fileExtension = MimeTypeMap.getFileExtensionFromUrl(uri

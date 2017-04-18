@@ -12,7 +12,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.goohungrry.ecode.MyApplication;
+import com.goohungrry.ecode.HomeActivity;
+import com.goohungrry.ecode.Myapp;
 import com.goohungrry.ecode.utils.ParseUtils;
 import com.goohungrry.ecode.utils.ProgressBarUtil;
 import com.goohungrry.ecode.utils.Utils;
@@ -56,12 +57,12 @@ public class RestClient {
 
 
     private RestClient() {
-        requestQueue = Volley.newRequestQueue(MyApplication.getContext());
+        requestQueue = Volley.newRequestQueue(Myapp.getContext());
         myApiHeaders = new HashMap<String, String>();
     }
 
     private RestClient(HashMap<String, String> apiHeaders) {
-        requestQueue = Volley.newRequestQueue(MyApplication.getContext());
+        requestQueue = Volley.newRequestQueue(Myapp.getContext());
         myApiHeaders = apiHeaders;
     }
 
