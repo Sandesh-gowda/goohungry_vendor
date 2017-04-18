@@ -3,7 +3,6 @@ package com.goohungrry.ecode;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,16 +16,16 @@ import com.goohungrry.ecode.homeFragment.UserProfileFragment;
  * Created by linuxy on 4/10/17.
  */
 
-public class Dashboard extends FragmentActivity implements View.OnClickListener {
-    private  final String TAG = Dashboard.class.getSimpleName() ;
-    private TextView txt_title;
-    private ImageView img_right;
+public class HomeActivity extends BaseActivity implements View.OnClickListener {
+    private  final String TAG = HomeActivity.class.getSimpleName() ;
+//    private TextView txt_title;
+//    private ImageView img_right;
     private ImageView[] imagebuttons ;
     private TextView[] textviews;
     private int index;
     private int currentTabIndex;
     private Fragment[] fragments;
-    private Context context;
+//    private Context context;
     private HomeResturantFragment homeResturantFragment;
     private SearchResturantFragment searchResturantFragment;
     private UserProfileFragment userProfileFragment;

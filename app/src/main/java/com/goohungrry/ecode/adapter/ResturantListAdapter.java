@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.goohungrry.ecode.R;
@@ -36,9 +37,7 @@ public class ResturantListAdapter extends RecyclerView.Adapter<ResturantHolder> 
 
     @Override
     public ResturantHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ViewGroup mainGroup = (ViewGroup) mInflater.inflate(R.layout.card
-
-                , parent, false);
+        ViewGroup mainGroup = (ViewGroup) mInflater.inflate(R.layout.card, parent, false);
 
         return new ResturantHolder(mainGroup);
     }
@@ -46,16 +45,21 @@ public class ResturantListAdapter extends RecyclerView.Adapter<ResturantHolder> 
     @Override
     public void onBindViewHolder(ResturantHolder holder, int position) {
         final RestList model = catLists.get(position);
-        Log.v("ResturantName",model.getName());
-        List<String> cuisn =model.getCuisine();
+        Log.v("ResturantName", model.getName());
+        List<String> cuisn = model.getCuisine();
 
 
         holder.cusinName.setText(android.text.TextUtils.join(",", cuisn));
         holder.res.setText(model.getName());
         Uri imageUri = Uri.parse(model.getImage());
         holder.draweeView.setImageURI(imageUri);
-    }
+        holder.rowItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+    }
 
 
     @Override
