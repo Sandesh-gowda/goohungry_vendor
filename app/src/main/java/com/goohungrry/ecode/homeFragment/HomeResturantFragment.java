@@ -17,12 +17,14 @@ import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import com.goohungrry.ecode.BaseFragment;
 import com.goohungrry.ecode.HomeActivity;
 import com.goohungrry.ecode.Myapp;
 import com.goohungrry.ecode.R;
 import com.goohungrry.ecode.adapter.ResturantListAdapter;
 import com.goohungrry.ecode.helper.VolleyMultipartRequest;
 import com.goohungrry.ecode.model.resturantList.RestList;
+import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,10 +41,9 @@ import java.util.Map;
  */
 
 
-
-public class HomeResturantFragment extends Fragment {
+public class HomeResturantFragment extends BaseFragment {
     private View view;
-    private RecyclerView recyclerView;
+    private SuperRecyclerView recyclerView;
     private ResturantListAdapter adapter;
 
     public HomeResturantFragment() {
@@ -50,34 +51,33 @@ public class HomeResturantFragment extends Fragment {
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.homefragment, container, false);
-        initRecyclerView();
-
-
+        view = inflater.inflate(R.layout.home_fragment, container, false);
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        initializeView();
         //  intiTask();
         updatePhonNetwork();
     }
 
-    private void initRecyclerView() {
 
-//        progressBar = (ProgressBar) view.findViewById(R.id.my_stock_progressbar);
-//        empty_stock = (TextView) view.findViewById(R.id.empty_stock);
-        LinearLayoutManager layoutManager
-                = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        recyclerView = (RecyclerView)
-                view.findViewById(R.id.recycler_view_new);
-        recyclerView
-                .setLayoutManager(layoutManager);
-      ;
+    private void initializeView() {
+        recyclerView = (SuperRecyclerView) getView().findViewById(R.id.hotelsRecycleView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setEmptyListener(this);
+        recyclerView.setEmptyText("No results found!!");
+        recyclerView.setRefreshListener(this);
+        recyclerView.setRefreshingColorResources(android.R.color.holo_orange_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_orange_light);
+        recyclerView.setupMoreListener(this, 1);
     }
 
-    public void updatePhonNetwork(){
+    public void updatePhonNetwork() {
 
         String url = "https://goohungrry.com/stack/v1/list";
         VolleyMultipartRequest multipartRequest = new VolleyMultipartRequest(Request.Method.POST, url, new Response.Listener<NetworkResponse>() {
@@ -86,7 +86,7 @@ public class HomeResturantFragment extends Fragment {
                 String resultResponse = new String(response.data);
 
                 try {
-                    JSONObject json= new JSONObject(resultResponse);
+                    JSONObject json = new JSONObject(resultResponse);
                     JSONArray arrJson = json.getJSONArray("rest_list");
                     setData(String.valueOf(arrJson));
 
@@ -102,30 +102,28 @@ public class HomeResturantFragment extends Fragment {
 
                 NetworkResponse networkResponse = error.networkResponse;
                 String errorMessg = "Unknown error";
-                if (networkResponse == null){
-                    if(error.getClass().equals(TimeoutError.class)){
-                        errorMessg= "RequestTimeOut";
+                if (networkResponse == null) {
+                    if (error.getClass().equals(TimeoutError.class)) {
+                        errorMessg = "RequestTimeOut";
                     }
-                }else {
+                } else {
                     String result = new String(networkResponse.data);
-                    try{
+                    try {
                         JSONObject response = new JSONObject(result);
 
-                    }catch (JSONException e){
+                    } catch (JSONException e) {
                         e.printStackTrace();
 
                     }
                 }
             }
-        }){
+        }) {
             @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params = new HashMap<>();
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
 
                 //  params.put("latitude",lat);
                 //  params.put("longitude",logn);
-
-
 
 
                 return params;

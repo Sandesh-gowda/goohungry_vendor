@@ -9,7 +9,7 @@
     android:layout_gravity="center_horizontal"
     android:background="@android:color/transparent" >
 
-    <com.zaxme.app.shared.customview.ZaxLoadingView
+    <com.goohungrry.ecode.ui.LoadingView
         android:id="@+id/hud"
         android:layout_width="@dimen/dp_70"
         android:layout_height="@dimen/dp_20"
