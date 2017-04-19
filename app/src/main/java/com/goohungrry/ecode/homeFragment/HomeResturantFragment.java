@@ -24,6 +24,8 @@ import com.goohungrry.ecode.R;
 import com.goohungrry.ecode.adapter.ResturantListAdapter;
 import com.goohungrry.ecode.helper.VolleyMultipartRequest;
 import com.goohungrry.ecode.model.resturantList.RestList;
+import com.goohungrry.ecode.network.RestClient;
+import com.goohungrry.ecode.network.URLData;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
 import org.json.JSONArray;
@@ -61,8 +63,20 @@ public class HomeResturantFragment extends BaseFragment {
         initializeView();
         //  intiTask();
         updatePhonNetwork();
+        makeHotelsListApi();
     }
 
+    private void makeHotelsListApi() {
+        RestClient restClient = RestClient.getInstance();
+        restClient.post(getActivity(),null,null,this, URLData.URL_HOTELS_LIST);
+    }
+
+    @Override
+    public void onSuccess(String responce, Object data, int urlId, int position) {
+        if (urlId==URLData.URL_HOTELS_LIST.getUrlId()){
+
+        }
+    }
 
     private void initializeView() {
         recyclerView = (SuperRecyclerView) getView().findViewById(R.id.hotelsRecycleView);
@@ -76,6 +90,9 @@ public class HomeResturantFragment extends BaseFragment {
                 android.R.color.holo_orange_light);
         recyclerView.setupMoreListener(this, 1);
     }
+
+
+
 
     public void updatePhonNetwork() {
 

@@ -3,6 +3,7 @@ package com.goohungrry.ecode;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 
+import com.goohungrry.ecode.network.ResponseHandler;
 import com.malinskiy.superrecyclerview.OnEmptyClickListener;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 
@@ -10,7 +11,7 @@ import com.malinskiy.superrecyclerview.OnMoreListener;
  * Created by Kalyan on 4/19/2017.
  */
 
-public class BaseFragment extends Fragment implements OnMoreListener,OnEmptyClickListener,SwipeRefreshLayout.OnRefreshListener {
+public class BaseFragment extends Fragment implements OnMoreListener,OnEmptyClickListener,SwipeRefreshLayout.OnRefreshListener,ResponseHandler {
     @Override
     public void onRefresh() {
 
@@ -23,6 +24,16 @@ public class BaseFragment extends Fragment implements OnMoreListener,OnEmptyClic
 
     @Override
     public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
+
+    }
+
+    @Override
+    public void onSuccess(String responce, Object data, int urlId, int position) {
+
+    }
+
+    @Override
+    public void onFailure(Exception e, int urlId) {
 
     }
 }

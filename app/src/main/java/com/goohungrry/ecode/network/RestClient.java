@@ -1,6 +1,7 @@
 package com.goohungrry.ecode.network;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -76,7 +77,7 @@ public class RestClient {
     }
 
 
-    public <T> void post(Activity ctx, Object reqObject, Type classType, ResponseHandler listener, URLData urlData) {
+    public <T> void post(Context ctx, Object reqObject, Type classType, ResponseHandler listener, URLData urlData) {
         try {
             JSONObject reqJsonObj = new JSONObject(ParseUtils.tojson(reqObject, urlData.getmUrl()));
             makeCall(Request.Method.POST, ctx, reqJsonObj, classType, urlData, listener, 0);
@@ -85,7 +86,7 @@ public class RestClient {
         }
     }
 
-    public <T> void post(Activity ctx, Object reqObject, Type classType, ResponseHandler listener, URLData urlData, int position) {
+    public <T> void post(Context ctx, Object reqObject, Type classType, ResponseHandler listener, URLData urlData, int position) {
         try {
             JSONObject reqJsonObj = new JSONObject(ParseUtils.tojson(reqObject, urlData.getmUrl()));
             makeCall(Request.Method.POST, ctx, reqJsonObj, classType, urlData, listener, position);
@@ -94,7 +95,7 @@ public class RestClient {
         }
     }
 
-    public <T> void get(Activity ctx, Object reqObject, Type classType,
+    public <T> void get(Context ctx, Object reqObject, Type classType,
                         ResponseHandler listener, URLData urlData) {
         try {
             JSONObject reqJsonObj = new JSONObject(ParseUtils.tojson(reqObject, urlData.getmUrl()));
@@ -104,7 +105,7 @@ public class RestClient {
         }
     }
 
-    public <T> void get(Activity ctx, Object reqObject, Type classType,
+    public <T> void get(Context ctx, Object reqObject, Type classType,
                         ResponseHandler listener, URLData urlData, int position) {
         try {
             JSONObject reqJsonObj = new JSONObject(ParseUtils.tojson(reqObject, urlData.getmUrl()));
@@ -115,7 +116,7 @@ public class RestClient {
     }
 
 
-    private void makeCall(int type, final Activity ctx, final JSONObject reqUestObject, final Type classType, final URLData urlData, final ResponseHandler listener, final int position) {
+    private void makeCall(int type, final Context ctx, final JSONObject reqUestObject, final Type classType, final URLData urlData, final ResponseHandler listener, final int position) {
         if (!Utils.isOnline(ctx)) {
             return;
         }
@@ -132,7 +133,8 @@ public class RestClient {
                 if (urlData.isShowProgress() || (progressBarUtil != null && progressBarUtil.isShowing())) {
                     progressBarUtil.dismissProgress();
                 }
-                listener.onSuccess(response,urlData.getUrlId(),position);
+                Object data = ParseUtils.fromJson(response, classType, LOGTAG);
+                listener.onSuccess(response,data,urlData.getUrlId(),position);
             }
         }, new Response.ErrorListener() {
 
