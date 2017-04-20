@@ -28,7 +28,7 @@
             android:background="@android:color/white"
             android:clipChildren="false">
 
-            <com.facebook.drawee.view.SimpleDraweeView
+            <ImageView
                 android:id="@+id/item_image"
                 android:layout_width="100.0dip"
                 android:layout_height="100.0dip"

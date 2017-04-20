@@ -7,6 +7,6 @@ import java.util.ArrayList;
  */
 
 public class RestuarentData {
-    public ArrayList<Banners>Banners;
-    public ArrayList<RestaurentList>Rest_list;
+    public ArrayList<Banners>banners;
+    public ArrayList<RestaurentList>rest_list;
 }

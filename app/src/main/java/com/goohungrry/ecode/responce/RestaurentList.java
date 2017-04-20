@@ -1,5 +1,7 @@
 package com.goohungrry.ecode.responce;
 
+import java.util.ArrayList;
+
 /**
  * Created by Kalyan on 4/20/2017.
  */
@@ -7,11 +9,11 @@ package com.goohungrry.ecode.responce;
 public class RestaurentList {
 
 
-    public String[] cuisine;
+    public ArrayList<String> cuisine;
 
-    public String status;
+    public int status;
 
-    public String deliveryCharges;
+    public int deliveryCharges;
 
     public String image;
 
@@ -21,7 +23,7 @@ public class RestaurentList {
 
     public String city;
 
-    public String[] Servings;
+    public ArrayList<String> Servings;
 
     public String closeTime;
 
@@ -40,6 +42,8 @@ public class RestaurentList {
     public String ratings;
 
     public String availability;
+
+    public int itemType;
 
 
 

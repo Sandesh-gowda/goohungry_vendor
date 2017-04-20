@@ -1,6 +1,5 @@
 package com.goohungrry.ecode.network;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
@@ -13,7 +12,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.goohungrry.ecode.HomeActivity;
 import com.goohungrry.ecode.Myapp;
 import com.goohungrry.ecode.utils.ParseUtils;
 import com.goohungrry.ecode.utils.ProgressBarUtil;
@@ -51,7 +49,6 @@ public class RestClient {
     }
 
 
-
     public static RestClient getInstance(HashMap<String, String> apiHeaders) {
         return new RestClient(apiHeaders);
     }
@@ -79,7 +76,12 @@ public class RestClient {
 
     public <T> void post(Context ctx, Object reqObject, Type classType, ResponseHandler listener, URLData urlData) {
         try {
-            JSONObject reqJsonObj = new JSONObject(ParseUtils.tojson(reqObject, urlData.getmUrl()));
+            JSONObject reqJsonObj = null;
+            if (reqObject == null) {
+                reqJsonObj = new JSONObject();
+            } else {
+                reqJsonObj = new JSONObject(ParseUtils.tojson(reqObject, urlData.getmUrl()));
+            }
             makeCall(Request.Method.POST, ctx, reqJsonObj, classType, urlData, listener, 0);
         } catch (Exception e) {
             e.printStackTrace();
@@ -133,8 +135,8 @@ public class RestClient {
                 if (urlData.isShowProgress() || (progressBarUtil != null && progressBarUtil.isShowing())) {
                     progressBarUtil.dismissProgress();
                 }
-                Object data = ParseUtils.fromJson(response, classType, LOGTAG);
-                listener.onSuccess(response,data,urlData.getUrlId(),position);
+                Object data = ParseUtils.fromHtmlJson(response, classType, LOGTAG);
+                listener.onSuccess(response, data, urlData.getUrlId(), position);
             }
         }, new Response.ErrorListener() {
 
@@ -178,11 +180,6 @@ public class RestClient {
         requestQueue.add(stringRequest);
 
     }
-
-
-
-
-
 
 
 }

@@ -28,8 +28,9 @@ public  class BaseActivity extends AppCompatActivity implements ResponseHandler{
         return Utils.isNetworkAvailable(context);
     }
 
+
     @Override
-    public void onSuccess(String responce, int urlId, int position) {
+    public void onSuccess(String responce, Object data, int urlId, int position) {
 
     }
 

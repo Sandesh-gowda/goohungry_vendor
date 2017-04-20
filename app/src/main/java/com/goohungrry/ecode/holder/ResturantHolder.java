@@ -2,9 +2,8 @@ package com.goohungrry.ecode.holder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ImageView;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.goohungrry.ecode.R;
 import com.goohungrry.ecode.helper.RecyclerView_OnClickListener;
 import com.goohungrry.ecode.ui.GooTextView;
@@ -18,7 +17,7 @@ public class ResturantHolder extends RecyclerView.ViewHolder implements View.OnC
 
     public GooTextView res;
     public GooTextView cusinName;
-    public SimpleDraweeView draweeView;
+    public ImageView draweeView;
     public View rowItem;
 
 
@@ -27,7 +26,7 @@ public class ResturantHolder extends RecyclerView.ViewHolder implements View.OnC
     public ResturantHolder(View itemView) {
         super(itemView);
         rowItem = itemView;
-        draweeView = (SimpleDraweeView) itemView.findViewById(R.id.item_image);
+        draweeView = (ImageView) itemView.findViewById(R.id.item_image);
         res = (GooTextView) itemView.findViewById(R.id.dishname);
         cusinName = (GooTextView) itemView.findViewById(R.id.qText);
     }
