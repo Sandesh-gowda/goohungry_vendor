@@ -42,8 +42,6 @@ public class HomeResturantFragment extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initializeView();
-        //  intiTask();
-//        updatePhonNetwork();
         makeHotelsListApi();
     }
 
@@ -90,4 +88,8 @@ public class HomeResturantFragment extends BaseFragment {
     }
 
 
+    @Override
+    public void onRefresh() {
+        makeHotelsListApi();
+    }
 }
