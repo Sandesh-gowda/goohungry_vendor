@@ -1,6 +1,7 @@
 package com.goohungrry.ecode.adapter;
 
 import android.content.Context;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -77,6 +78,8 @@ public class ResturantsListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         }
         ImagePagerAdapter adapter = new ImagePagerAdapter(mcontext, imageList);
         resturantHolder.pager.setAdapter(adapter);
+
+        resturantHolder.tabLayout.setupWithViewPager(resturantHolder.pager, true);
     }
 
     private void setNormalData(int position, ResturantHolder holder) {
@@ -107,6 +110,8 @@ public class ResturantsListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
 
         private final ViewPager pager;
+        TabLayout tabLayout;
+
         public View rowItem;
 
 
@@ -115,6 +120,7 @@ public class ResturantsListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         public ResturantPagerHolder(View itemView) {
             super(itemView);
             rowItem = itemView;
+            tabLayout = (TabLayout) itemView.findViewById(R.id.tab_layout);
             pager = (ViewPager) itemView.findViewById(R.id.pager);
         }
 
