@@ -1,6 +1,7 @@
 package com.goohungrry.ecode.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
@@ -12,8 +13,10 @@ import com.goohungrry.ecode.R;
 import com.goohungrry.ecode.helper.OnitemClickLIstener;
 import com.goohungrry.ecode.helper.RecyclerView_OnClickListener;
 import com.goohungrry.ecode.holder.ResturantHolder;
+import com.goohungrry.ecode.homeFragment.HotelMenuActivity;
 import com.goohungrry.ecode.responce.Banners;
 import com.goohungrry.ecode.responce.RestaurentList;
+import com.goohungrry.ecode.utils.ConstantUtils;
 import com.goohungrry.ecode.utils.ImageLoader;
 
 import java.util.ArrayList;
@@ -88,12 +91,13 @@ public class ResturantsListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         holder.cusinName.setText(android.text.TextUtils.join(",", cuisn));
         holder.res.setText(model.name);
         ImageLoader.loadImage(model.image, holder.draweeView, R.drawable.tim);
-//        Uri imageUri = Uri.parse(model.image);
-//        holder.draweeView.setImageURI(imageUri);
         holder.rowItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(mcontext, HotelMenuActivity.class);
+                intent.putExtra(ConstantUtils.DATA, model.uuid);
+                mcontext.startActivity(intent);
             }
         });
 

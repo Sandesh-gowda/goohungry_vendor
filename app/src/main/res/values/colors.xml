@@ -71,4 +71,44 @@
     <color name="dark_yellow">#f57f17</color>
 
 
+    //Global colors dont change
+    <color name="app_yellow">#fbae18</color>
+    <color name="app_blue">#00a7ce</color>
+    <color name="app_green">#39b54a</color>
+
+
+    <color name="green_disable">#8039b54a</color>
+    <color name="blue">@color/app_blue</color>
+    <color name="blue_disable">#8000a7ce</color>
+    <color name="yellow">@color/app_yellow</color>
+    <color name="yellow_disable">#80fbae18</color>
+    <color name="semitransparent">#CC000000</color>
+
+
+    /*Common color codes*/
+    <color name="color_background">@color/white</color>
+    <color name="editTextHighlight">#bdbdbd</color>
+    <color name="editTextInputHighlight">#bebebe</color>
+    <color name="floating_edit_text_error_color">#e74d48</color>
+    /*color codes for the start screen*/
+    <color name="color_create_account">#00a7ce</color>
+    <color name="color_login">@color/app_yellow</color>
+
+
+    /*color codes for the signup screen*/
+    <color name="color_sign_up_title">#fbae18</color>
+    <color name="color_sign_up_view">#fbae18</color>
+    <color name="custom_text_color">#333333</color>
+
+    <color name="line_color">#CBCBCB</color>
+    <color name="app_bg_color">@color/white</color>
+    <color name="unread_color">#f0f4f5</color>
+    <color name="colorRipple">#CBCBCB</color>
+    <color name="color_divider">#bdbdbd</color>
+    <color name="circle">#757575</color>
+    <color name="nav_divider_color">#50007d9b</color>
+    <color name="timer_color">#e74d48</color>
+    <color name="alpha_white">#D9ffffff</color>
+    <color name="link_color">#00bfa5</color>
+
 </resources>

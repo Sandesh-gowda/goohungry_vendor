@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -18,12 +18,12 @@
         <item name="android:paddingRight">6.0dip</item>
         <item name="android:focusable">false</item>
     </style>
+
     <style name="img_Style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:contentDescription">@string/app_name</item>
     </style>
-
 
 
     <style name="CardView.Small" parent="@style/CardViewStyle">
@@ -48,10 +48,12 @@
         <item name="android:paddingRight">8.0dip</item>
         <item name="android:paddingBottom">16.0dip</item>
     </style>
+
     <style name="SearchEditTextTheme">
         <item name="colorControlNormal">@color/black_new</item>
         <item name="colorControlActivated">@color/black_new</item>
     </style>
+
     <style name="txt_titleStyle1">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -64,7 +66,6 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
-
 
 
     <style name="CardViewStyle" parent="@style/CardView">
@@ -89,6 +90,164 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
+    </style>
+
+
+    <style name="appbar_theme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+
+    <style name="toolbar_theme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="right_padding_16">
+        <item name="android:paddingBottom">@dimen/dp_16</item>
+        <item name="android:paddingLeft">@dimen/dp_16</item>
+        <item name="android:paddingTop">@dimen/dp_16</item>
+    </style>
+
+
+
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/floating_edit_text_error_color</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="wrap_dimen">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="width_match_height_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="txt_wht" parent="wrap_dimen">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="txt_wht_10" parent="txt_wht">
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="txt_wht_12" parent="txt_wht">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="txt_wht_14" parent="txt_wht">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="txt_wht_16" parent="txt_wht">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="txt_wht_18" parent="txt_wht">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+
+    <style name="txt_blk" parent="wrap_dimen">
+        <item name="android:textColor">@color/custom_text_color</item>
+    </style>
+
+    <style name="txt_blk_10" parent="txt_blk">
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="txt_blk_12" parent="txt_blk">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="txt_blk_14" parent="txt_blk">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="txt_blk_16" parent="txt_blk">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="txt_blk_18" parent="txt_blk">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/color_divider</item>
+    </style>
+
+    <style name="txt_blue" parent="wrap_dimen">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="txt_blue_10" parent="txt_blue">
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="txt_blue_12" parent="txt_blue">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="txt_blue_14" parent="txt_blue">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="txt_blue_16" parent="txt_blue">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="txt_blue_18" parent="txt_blue">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/app_theme_color</item>
+        <item name="android:textColorHint">@color/sub_txt</item>
+        <item name="android:textColorHighlight">@color/sub_txt</item>
+        <item name="textColorError">@color/floating_edit_text_error_color</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="editTextHintColorStyle">
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textColorHint">@color/sub_txt</item>
+        <item name="android:textColorHighlight">@color/sub_txt</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="colorControlNormal">@color/sub_txt</item>
+        <item name="colorControlActivated">@color/floating_edit_text_error_color</item>
+        <item name="textColorError">@color/floating_edit_text_error_color</item>
+        <item name="colorControlHighlight">@color/floating_edit_text_error_color</item>
+        <item name="colorAccent">@color/sub_txt</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/sub_txt
+        </item>
+    </style>
+
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@null</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabPaddingStart">6dp</item>
+        <item name="tabPaddingEnd">6dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/app_bg_color</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
     </style>
 
 </resources>

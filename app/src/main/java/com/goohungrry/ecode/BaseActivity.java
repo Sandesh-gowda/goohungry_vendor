@@ -1,10 +1,7 @@
 package com.goohungrry.ecode;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 
 import com.goohungrry.ecode.helper.Utils;
 import com.goohungrry.ecode.network.ResponseHandler;
@@ -24,8 +21,8 @@ public  class BaseActivity extends AppCompatActivity implements ResponseHandler{
 
 
 
-    public boolean isNetworkAvailable(Context context) {
-        return Utils.isNetworkAvailable(context);
+    public boolean isNetworkAvailable() {
+        return Utils.isNetworkAvailable(getApplicationContext());
     }
 
 

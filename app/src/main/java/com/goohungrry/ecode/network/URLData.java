@@ -6,7 +6,10 @@ package com.goohungrry.ecode.network;
 
 public enum URLData {
     URL_HOSTED_SERVICE_CALL("", false, true, "", -1),
-    URL_HOTELS_LIST("https://goohungrry.com/stack/v1/list", false, true, "", 0);
+    URL_HOTELS_LIST("https://goohungrry.com/stack/v1/list", false, true, "", 1),
+    URL_HOTELS_MENU_LIST("https://goohungrry.com/stack/v1/menu", false, true, "", 2),
+    URL_HOTELS_MENU_DETAILS("https://goohungrry.com/stack/v1/menuDetails", false, true, "", 3),
+    URL_HOTELS_MENU_LIST_DETAILS("https://goohungrry.com/stack/v1/menuItems", false, true, "", 4);
 
 
     private String mUrl;
