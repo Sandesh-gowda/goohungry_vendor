@@ -2,6 +2,7 @@ package com.goohungrry.ecode;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 import com.goohungrry.ecode.helper.Utils;
 import com.goohungrry.ecode.network.ResponseHandler;
@@ -34,5 +35,18 @@ public  class BaseActivity extends AppCompatActivity implements ResponseHandler{
     @Override
     public void onFailure(Exception e, int urlId) {
 
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

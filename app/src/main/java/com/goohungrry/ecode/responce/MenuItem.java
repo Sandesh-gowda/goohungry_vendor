@@ -23,7 +23,7 @@ public class MenuItem {
 
     public String pid;
 
-    public String type;
+    public int type;
 
     public String menu_sort;
 

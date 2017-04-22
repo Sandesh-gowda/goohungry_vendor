@@ -35,7 +35,7 @@ public class ImagePagerAdapter extends PagerAdapter {
         inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.image_pager_item, container, false);
         ImageView photoView = (ImageView) itemView.findViewById(R.id.photoview);
-        ImageLoader.loadImage(image_urls.get(position), photoView, R.drawable.tim);
+        ImageLoader.loadImage(image_urls.get(position), photoView, R.drawable.placeholder);
         itemView.setTag("TAG" + position);
         container.addView(itemView);
         return itemView;

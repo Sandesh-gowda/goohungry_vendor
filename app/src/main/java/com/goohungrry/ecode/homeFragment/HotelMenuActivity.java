@@ -122,8 +122,8 @@ public class HotelMenuActivity extends BaseActivity {
     private void setData(HotelMenuDetails details) {
         handleProgress(null);
         ArrayList<MenuCategory> categoryArrayList = details.catogory;
-        setUpToolbar(details.name, true);
-        ImageLoader.loadImage(details.image, collapsingImage, R.drawable.tim);
+        setUpToolbar(details.name, false);
+        ImageLoader.loadImage(details.image, collapsingImage, R.drawable.placeholder);
         if (!Utils.isEmpty(categoryArrayList)) {
             ArrayList<String> headersList = new ArrayList<>();
             ArrayList<Fragment> fragmentArrayList = new ArrayList<>();

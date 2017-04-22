@@ -90,7 +90,7 @@ public class ResturantsListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         List<String> cuisn = model.cuisine;
         holder.cusinName.setText(android.text.TextUtils.join(",", cuisn));
         holder.res.setText(model.name);
-        ImageLoader.loadImage(model.image, holder.draweeView, R.drawable.tim);
+        ImageLoader.loadImage(model.image, holder.draweeView, R.drawable.placeholder);
         holder.rowItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
