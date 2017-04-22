@@ -6,6 +6,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +26,7 @@ import com.goohungrry.ecode.responce.MenuCategory;
 import com.goohungrry.ecode.shared.FragmentAdapter;
 import com.goohungrry.ecode.ui.SampleProgressView;
 import com.goohungrry.ecode.utils.ConstantUtils;
+import com.goohungrry.ecode.utils.ImageLoader;
 import com.goohungrry.ecode.utils.Utils;
 
 import java.lang.reflect.Type;
@@ -51,7 +53,7 @@ public class HotelMenuActivity extends BaseActivity {
     ViewPager viewpager;
     @BindView(R.id.relativeLayout)
     LinearLayout relativeLayout;
-//    @BindView(R.id.cordinator_layout)
+    //    @BindView(R.id.cordinator_layout)
 //    CoordinatorLayout cordinatorLayout;
     @BindView(R.id.progressview)
     SampleProgressView mProgressview;
@@ -120,6 +122,8 @@ public class HotelMenuActivity extends BaseActivity {
     private void setData(HotelMenuDetails details) {
         handleProgress(null);
         ArrayList<MenuCategory> categoryArrayList = details.catogory;
+        setUpToolbar(details.name, true);
+        ImageLoader.loadImage(details.image, collapsingImage, R.drawable.tim);
         if (!Utils.isEmpty(categoryArrayList)) {
             ArrayList<String> headersList = new ArrayList<>();
             ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
@@ -130,6 +134,18 @@ public class HotelMenuActivity extends BaseActivity {
             FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(), fragmentArrayList, headersList);
             viewpager.setAdapter(adapter);
             tabLayout.setupWithViewPager(viewpager);
+        }
+    }
+
+    public void setUpToolbar(String title, boolean enableBack) {
+        try {
+            setSupportActionBar(toolbarCollapse);
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle(null);
+            toolbarCollapse.setTitle(title);
+            actionBar.setDisplayHomeAsUpEnabled(enableBack);
+        } catch (Exception e) {
+            Utils.logCrash(e);
         }
     }
 }
