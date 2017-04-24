@@ -11,12 +11,13 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.goohungrry.ecode.utils.Prefs;
 
 /**
  * Created by Kalyan on 4/19/2017.
  */
 
-public  class Myapp extends Application {
+public class Myapp extends Application {
     private RequestQueue mRequestQueue;
     private static Myapp mInstance;
 
@@ -30,6 +31,7 @@ public  class Myapp extends Application {
         super.onCreate();
         mApplicationContext = getApplicationContext();
         Fresco.initialize(this);
+        Prefs.initPrefs(getApplicationContext());
         mInstance = this;
     }
 
@@ -46,7 +48,6 @@ public  class Myapp extends Application {
     public static synchronized Myapp getInstance() {
         return mInstance;
     }
-
 
 
     public RequestQueue getRequestQueue() {

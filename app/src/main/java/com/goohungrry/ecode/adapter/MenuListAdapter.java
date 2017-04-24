@@ -51,7 +51,18 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MenuHo
         } else {
             holder.mealType.setImageResource(R.drawable.ic_veg);
         }
+        holder.ivAddProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+        holder.ivSubtractProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 
