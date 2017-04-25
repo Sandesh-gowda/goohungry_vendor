@@ -16,6 +16,8 @@
     <dimen name="restaurant_activity_search_top_margin">58.0dip</dimen>
     <!--<dimen name="dp_10">10.0dip</dimen>-->
     <!--<dimen name="dp_5">5.0dip</dimen>-->
+    <dimen name="small_gap">4.0dip</dimen>
+    <dimen name="normal_margin_gap">16.0dip</dimen>
     <dimen name="txt_size_10">10.0sp</dimen>
     <dimen name="txt_size_12">12.0sp</dimen>
     <dimen name="txt_size_14_sp">14.0sp</dimen>
@@ -129,5 +131,34 @@
     <dimen name="sp_14_5">14.5sp</dimen>
 
 
+
+
+    <dimen name="double_extra_normal_margin_gap">36.0dip</dimen>
+    <dimen name="extra_gap">12.0dip</dimen>
+    <dimen name="extra_margin_gap">24.0dip</dimen>
+    <dimen name="restaurant_menu_cost_text_size">16.0sp</dimen>
+    <dimen name="divider_height">0.30000007dip</dimen>
+    <dimen name="normal_gap">8.0dip</dimen>
+    <dimen name="closed_badge_restaurant_expanded_menu_corner_radius">2.0dip</dimen>
+    <dimen name="margin_big">12.0dip</dimen>
+    <dimen name="_margin_large">16.0dip</dimen>
+    <dimen name="_margin_normal">8.0dip</dimen>
+    <dimen name="_margin_small">4.0dip</dimen>
+    <dimen name="small_margin_gap">10.0dip</dimen>
+    <dimen name="restaurant_list_card_view_corner_radius">2.0dip</dimen>
+    <dimen name="restaurant_list_card_view_elevation">1.0dip</dimen>
+    <dimen name="restaurant_list_cost_text_size">15.0sp</dimen>
+    <dimen name="restaurant_list_cuisine_text_size">15.0sp</dimen>
+    <dimen name="restaurant_list_delivery_min_text_size">12.0sp</dimen>
+    <dimen name="restaurant_list_divider_height">0.30000007dip</dimen>
+    <dimen name="restaurant_list_image_size">96.0dip</dimen>
+    <dimen name="restaurant_list_name_text_size">18.0sp</dimen>
+    <dimen name="restaurant_list_star_text_size">16.0sp</dimen>
+    <dimen name="cardview_default_radius">2.0dip</dimen>
+    <dimen name="restaurant_fee_height">36.0dip</dimen>
+    <dimen name="selection_icon_height">24.0dip</dimen>
+    <dimen name="selection_image_height">100.0dip</dimen>
+    <dimen name="selection_image_width">196.0dip</dimen>
+    <dimen name="restaurant_promoted_dish_image_size">92.0dip</dimen>
 
 </resources>

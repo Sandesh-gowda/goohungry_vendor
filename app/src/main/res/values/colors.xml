@@ -53,7 +53,7 @@
     <color name="primary_text">#ff212121</color>
     <color name="light_yellow">#fffcf2dd</color>
     <color name="secondary_text">#ff727272</color>
-    <color name="faasos_credit_text">#ff25b06d</color>
+    <color name="credit_text">#ff25b06d</color>
     <color name="card_separator_color">#ffd7d7d7</color>
 
     <color name="app_theme_color">#00a7ce</color>
@@ -111,4 +111,12 @@
     <color name="alpha_white">#D9ffffff</color>
     <color name="link_color">#00bfa5</color>
 
+    <color name="expanded_menu_info_text_color">#ffbcbcbc</color>
+    <color name="scarlet">#ffd0021b</color>
+    <color name="seventy_percent_black">#b3000000</color>
+    <color name="forty_percent_black">#66000000</color>
+    <color name="ten_percent_black">#1a000000</color>
+    <color name="rest_list_ad_color">#ffffe17f</color>
+    <color name="ninety_percent_white">#e6ffffff</color>
+    <color name="fifteen_percent_black">#26000000</color>
 </resources>

@@ -5,7 +5,7 @@
     <string name="txt_payable_amt">Payable Amount</string>
     <string name="Rupee">₹</string>
     <string name="progress">show progress</string>
-
+    <string name="four_dollar_symbol">₹₹₹₹</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
