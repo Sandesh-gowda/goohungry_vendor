@@ -30,7 +30,6 @@
     <!--<dimen name="dp_15">15.0dip</dimen>-->
 
 
-
     <dimen name="dp_0">0dp</dimen>
     <dimen name="dp_1">1dp</dimen>
     <dimen name="dp_2">2dp</dimen>
@@ -129,8 +128,6 @@
     <dimen name="sp_36">36sp</dimen>
     <dimen name="sp_32">32sp</dimen>
     <dimen name="sp_14_5">14.5sp</dimen>
-
-
 
 
     <dimen name="double_extra_normal_margin_gap">36.0dip</dimen>

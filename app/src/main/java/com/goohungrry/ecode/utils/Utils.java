@@ -25,7 +25,6 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.goohungrry.ecode.HomeActivity;
 import com.goohungrry.ecode.Myapp;
 
 import java.io.File;
@@ -353,5 +352,10 @@ public class Utils {
             FilterArray[0] = new InputFilter.LengthFilter(maxLength);
             edt_text.setFilters(FilterArray);
         }
+    }
+
+
+    public boolean isLoggedIn(){
+        return false;
     }
 }
