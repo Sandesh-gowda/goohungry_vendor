@@ -9,7 +9,7 @@
     android:layout_gravity="center_horizontal"
     android:background="@android:color/transparent" >
 
-    <com.goohungrry.ecode.ui.LoadingView
+    <com.pinlab.vendor.ui.LoadingView
         android:id="@+id/hud"
         android:layout_width="@dimen/dp_70"
         android:layout_height="@dimen/dp_20"

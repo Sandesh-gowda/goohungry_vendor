@@ -45,7 +45,7 @@
                         android:src="@drawable/tim" />
                 </android.support.v7.widget.CardView>
 
-                <com.goohungrry.ecode.ui.GooTextView
+                <com.pinlab.vendor.ui.GooTextView
                     android:id="@+id/dishname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                     android:textSize="@dimen/restaurant_list_name_text_size" />
 
 
-                <com.goohungrry.ecode.ui.GooTextView
+                <com.pinlab.vendor.ui.GooTextView
                     android:id="@+id/qText"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -100,11 +100,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.0">
 
-                        <com.goohungrry.ecode.ui.GooTextView
+                        <com.pinlab.vendor.ui.GooTextView
                             android:id="@+id/restaurant_cost_disabled"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/four_dollar_symbol"
+                            android:text="@string/rupee"
                             android:textColor="@color/fifteen_percent_black"
                             android:textSize="18sp" />
 
@@ -118,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.1">
 
-                        <com.goohungrry.ecode.ui.GooTextView
+                        <com.pinlab.vendor.ui.GooTextView
                             android:id="@+id/restaurant_delivery_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

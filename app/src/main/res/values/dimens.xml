@@ -14,6 +14,7 @@
     <dimen name="restaurant_activity_search_height">38.0dip</dimen>
     <dimen name="restaurant_activity_search_right_margin">58.0dip</dimen>
     <dimen name="restaurant_activity_search_top_margin">58.0dip</dimen>
+    <dimen name="result_font">15sp</dimen>
     <!--<dimen name="dp_10">10.0dip</dimen>-->
     <!--<dimen name="dp_5">5.0dip</dimen>-->
     <dimen name="small_gap">4.0dip</dimen>

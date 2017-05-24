@@ -4,10 +4,10 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal">
 
-    <com.goohungrry.ecode.ui.SampleProgressView
+    <com.pinlab.vendor.ui.SampleProgressView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true">
-    </com.goohungrry.ecode.ui.SampleProgressView>
+    </com.pinlab.vendor.ui.SampleProgressView>
 
 </LinearLayout>

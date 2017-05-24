@@ -8,7 +8,7 @@
     android:visibility="gone">
 
 
-    <com.goohungrry.ecode.ui.SampleProgressView
+    <com.pinlab.vendor.ui.SampleProgressView
         android:id="@+id/progressview"
         android:layout_width="@dimen/dp_50"
         android:layout_height="@dimen/dp_50"

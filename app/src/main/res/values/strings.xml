@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Goohungrry</string>
+    <string name="app_name">GoVendor</string>
     <string name="ruppee">₹</string>
     <string name="rs">₹</string>
     <string name="txt_payable_amt">Payable Amount</string>
     <string name="Rupee">₹</string>
     <string name="progress">show progress</string>
-    <string name="four_dollar_symbol">₹₹₹₹</string>
+    <string name="rupee">₹₹₹₹</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">Sign in or Register</string>
@@ -22,4 +22,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="accept">Accept</string>
+
+
 </resources>

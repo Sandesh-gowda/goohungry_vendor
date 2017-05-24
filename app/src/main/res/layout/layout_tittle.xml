@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="54.0dip"
-    android:background="#1ab71f" >
+    android:background="@color/colorPrimary" >
 
     <TextView
         android:id="@+id/txt_left"
@@ -36,9 +36,9 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="5dp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/icon_groupinfo" />
+        android:src="@drawable/logout" />
 
     <TextView
         android:id="@+id/txt_right"

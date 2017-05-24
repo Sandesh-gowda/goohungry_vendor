@@ -3,6 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+
     android:layout_height="200dp">
 
     <android.support.v4.view.ViewPager
@@ -20,6 +21,7 @@
         android:layout_height="wrap_content"
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
+
         android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         app:tabIndicatorHeight="0dp" />
